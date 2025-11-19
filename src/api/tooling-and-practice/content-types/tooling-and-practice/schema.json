@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tooling_and_practices",
+  "info": {
+    "singularName": "tooling-and-practice",
+    "pluralName": "tooling-and-practices",
+    "displayName": "Tooling & Practices"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mui_icon": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

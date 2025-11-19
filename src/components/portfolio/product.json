@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_portfolio_products",
+  "info": {
+    "displayName": "Project",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "skills": {
+      "type": "component",
+      "component": "portfolio.chip",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

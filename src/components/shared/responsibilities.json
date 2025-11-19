@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_responsibilities",
+  "info": {
+    "displayName": "responsibilities"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

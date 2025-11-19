@@ -15,9 +15,25 @@
     "title": {
       "type": "string"
     },
-    "blocks": {
-      "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+    "skills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::skill.skill"
+    },
+    "bios": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bio.bio"
+    },
+    "experiences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::experience.experience"
+    },
+    "tooling_and_practices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tooling-and-practice.tooling-and-practice"
     }
   }
 }

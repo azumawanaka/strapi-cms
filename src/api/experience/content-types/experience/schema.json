@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "experiences",
+  "info": {
+    "singularName": "experience",
+    "pluralName": "experiences",
+    "displayName": "Experience"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Company": {
+      "type": "string"
+    },
+    "Summary": {
+      "type": "text"
+    },
+    "From": {
+      "type": "date"
+    },
+    "To": {
+      "type": "date"
+    },
+    "Role": {
+      "type": "string"
+    },
+    "responsibilities": {
+      "type": "component",
+      "component": "shared.responsibilities",
+      "repeatable": true
+    }
+  }
+}
