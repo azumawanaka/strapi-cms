@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_profile_profile_informations",
+  "info": {
+    "displayName": "ProfileInformation"
+  },
+  "options": {},
+  "attributes": {
+    "profile_picture": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "info_items": {
+      "type": "component",
+      "component": "profile.list-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

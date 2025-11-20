@@ -55,6 +55,31 @@ export interface PortfolioSectionHeader extends Struct.ComponentSchema {
   };
 }
 
+export interface ProfileListItem extends Struct.ComponentSchema {
+  collectionName: 'components_profile_list_items';
+  info: {
+    displayName: 'ListItem';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    mui_icon: Schema.Attribute.String;
+  };
+}
+
+export interface ProfileProfileInformation extends Struct.ComponentSchema {
+  collectionName: 'components_profile_profile_informations';
+  info: {
+    displayName: 'ProfileInformation';
+  };
+  attributes: {
+    info_items: Schema.Attribute.Component<'profile.list-item', true>;
+    profile_picture: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -134,6 +159,8 @@ declare module '@strapi/strapi' {
       'portfolio.product': PortfolioProduct;
       'portfolio.section': PortfolioSection;
       'portfolio.section-header': PortfolioSectionHeader;
+      'profile.list-item': ProfileListItem;
+      'profile.profile-information': ProfileProfileInformation;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.responsibilities': SharedResponsibilities;

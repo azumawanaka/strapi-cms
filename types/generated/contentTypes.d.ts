@@ -443,9 +443,14 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
   attributes: {
     bios: Schema.Attribute.Relation<'oneToMany', 'api::bio.bio'>;
+    contact_details: Schema.Attribute.Component<
+      'profile.profile-information',
+      false
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
     experiences: Schema.Attribute.Relation<
       'oneToMany',
       'api::experience.experience'
@@ -454,7 +459,6 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::about.about'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    skills: Schema.Attribute.Relation<'oneToMany', 'api::skill.skill'>;
     title: Schema.Attribute.String;
     tooling_and_practices: Schema.Attribute.Relation<
       'oneToMany',
